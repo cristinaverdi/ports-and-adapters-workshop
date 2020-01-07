@@ -7,7 +7,7 @@ import ports.adapters.workshop.interaction.TurnOffLightBulb
 import ports.adapters.workshop.interaction.TurnOnLightBulb
 
 @RestController
-class LightBulbController(val turnOnLightBulb: TurnOnLightBulb, val turnOffLightBulb: TurnOffLightBulb) {
+class LightBulbController(private val turnOnLightBulb: TurnOnLightBulb, private val turnOffLightBulb: TurnOffLightBulb) {
 
     @PostMapping("lightbulbs/{id}/turn-on")
     fun turnOn(@PathVariable id: Int) = turnOnLightBulb.execute(id)
