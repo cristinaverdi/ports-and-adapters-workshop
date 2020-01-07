@@ -1,7 +1,9 @@
 package ports.adapters.workshop.interaction
 
-import ports.adapters.workshop.lightBulb
-
-class TurnOffLightBulb {
-    fun execute(id: Int) = lightBulb.turnOff()
+class TurnOffLightBulb(private val lightBulbRepository: LightBulbRepository) {
+    fun execute(id: Int) {
+        val lightBulb = lightBulbRepository.retrieve(id)
+        lightBulb.turnOff()
+        lightBulbRepository.update(lightBulb)
+    }
 }

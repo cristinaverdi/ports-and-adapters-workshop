@@ -10,5 +10,3 @@ class PortsAndAdaptersWorkshopApplication
 fun main(args: Array<String>) {
 	runApplication<PortsAndAdaptersWorkshopApplication>(*args)
 }
-
-val lightBulb = LightBulb("1")

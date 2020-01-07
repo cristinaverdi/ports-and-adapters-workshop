@@ -1,9 +1,9 @@
 package ports.adapters.workshop.interaction
 
-import ports.adapters.workshop.lightBulb
-
-class TurnOnLightBulb {
+class TurnOnLightBulb(private val lightBulbRepository: LightBulbRepository) {
     fun execute(id: Int) {
-        return lightBulb.turnOn()
+        val lightBulb = lightBulbRepository.retrieve(id)
+        lightBulb.turnOn()
+        lightBulbRepository.update(lightBulb)
     }
 }
