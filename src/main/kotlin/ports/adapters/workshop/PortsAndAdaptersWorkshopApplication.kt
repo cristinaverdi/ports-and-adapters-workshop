@@ -11,4 +11,4 @@ fun main(args: Array<String>) {
 	runApplication<PortsAndAdaptersWorkshopApplication>(*args)
 }
 
-val lightBulb = LightBulb()
+val lightBulb = LightBulb("1")
