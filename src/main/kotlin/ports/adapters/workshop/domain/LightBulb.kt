@@ -1,12 +1,18 @@
 package ports.adapters.workshop.domain
 
-class LightBulb(private val id: String, private var on: Boolean = false) {
+class LightBulb(val id: String, status: LightBulbStatus = LightBulbStatus.OFF) {
+    var status: LightBulbStatus = status
+        private set
 
     fun turnOn() {
-        on = true
+        status = LightBulbStatus.ON
     }
 
     fun turnOff() {
-        on = false
+        status = LightBulbStatus.OFF
     }
+
+    operator fun component1(): String = this.id
+    operator fun component2(): LightBulbStatus = this.status
+
 }

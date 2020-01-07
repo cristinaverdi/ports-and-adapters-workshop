@@ -10,7 +10,7 @@ class LightBulbCLI(val turnOnLightBulb: TurnOnLightBulb, val turnOffLightBulb: T
         var line: String? = readLine()
         while (line != null) {
             // This variable declaration is a simplification
-            val id = 1
+            val id = "1"
 
             when (line) {
                 "turn on" -> turnOnLightBulb.execute(id)
