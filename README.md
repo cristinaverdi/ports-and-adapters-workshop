@@ -20,6 +20,5 @@ sdk install java 11.0.5-zulu
 sdk use java 11.0.5-zulu
 ```
 
- 
 * Install Gradle: `sdk install gradle`
 * Install IntelliJ IDEA (Community Edition): `https://www.jetbrains.com/idea/download/`
