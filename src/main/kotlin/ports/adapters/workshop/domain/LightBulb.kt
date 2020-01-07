@@ -1,6 +1,6 @@
 package ports.adapters.workshop.domain
 
-class LightBulb(var on : Boolean = true) {
+class LightBulb(private val id: String, private var on: Boolean = true) {
 
     fun turnOn() {
         on = true
